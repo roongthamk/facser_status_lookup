@@ -67,6 +67,17 @@
 const API_URL =
   "https://script.google.com/macros/s/AKfycbwbFvpTTdJVVVztsgxB6EQfnbnHEqQSi5thCOfo8bUBw-SH_7ZqHmLoGnmpCJK5Sku2/exec";
 
+if (!requestId || !email) {
+
+  document
+    .getElementById("results")
+    .innerHTML =
+      "<p>กรุณากรอกรหัสแจ้งซ่อมและอีเมล์</p>";
+
+  return;
+
+}
+  
 function searchRequest() {
 
   const requestId =
@@ -111,7 +122,7 @@ function searchRequest() {
 
       "<div class='result'>" +
 
-      "<b>Request ID:</b> " +
+      "<b>รหัสแจ้งซ่อม:</b> " +
       data.requestId +
       "<br><br>" +
 
@@ -128,7 +139,7 @@ function searchRequest() {
       "<br><br>" +
 
       "<b>รายละเอียด:</b><br>" +
-      data.requestDetail +
+      data.requestDetail.replace(/\n/g, "<br>") +
 
       "</div>";
 
@@ -143,6 +154,12 @@ function searchRequest() {
         "<p>เกิดข้อผิดพลาด</p>";
 
   });
+
+"<hr>" +
+
+"<b>สถานะปัจจุบัน:</b> " +
+(data.currentStatus || "รับเรื่องแล้ว") +
+"<br><br>"
 
 }
 
