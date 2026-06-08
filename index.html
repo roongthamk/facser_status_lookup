@@ -66,8 +66,10 @@
 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbwbFvpTTdJVVVztsgxB6EQfnbnHEqQSi5thCOfo8bUBw-SH_7ZqHmLoGnmpCJK5Sku2/exec";
+ 
+function searchRequest() {
 
-if (!requestId || !email) {
+  if (!requestId || !email) {
 
   document
     .getElementById("results")
@@ -75,10 +77,7 @@ if (!requestId || !email) {
       "<p>กรุณากรอกรหัสแจ้งซ่อมและอีเมล์</p>";
 
   return;
-
-}
-  
-function searchRequest() {
+  }
 
   const requestId =
     document
