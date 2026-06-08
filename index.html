@@ -120,21 +120,21 @@ function searchRequest() {
 
       "<b>รหัสแจ้งซ่อม:</b> " +
       data.requestId +
-      "<br><br>" +
+      "<br>" +
 
       "<b>ผู้แจ้ง:</b> " +
       data.requesterName +
-      "<br><br>" +
-
-      "<b>ชื่อคำขอ:</b> " +
-      data.requestName +
-      "<br><br>" +
+      "<br>" +
 
       "<b>วันที่แจ้ง:</b> " +
       data.requestDate +
-      "<br><br>" +
- 
-      "<b>รายละเอียด:</b><br>" +
+      "<br>" +
+      
+      "<b>ชื่อคำขอ:</b> " +
+      data.requestName +
+      "<br>" +
+         
+      "<b>รายละเอียดคำขอ:</b><br>" +
       data.requestDetail.replace(/\n/g, "<br>") +
 
       "<hr>" +
