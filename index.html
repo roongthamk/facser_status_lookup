@@ -137,10 +137,14 @@ function searchRequest() {
       "<b>วันที่แจ้ง:</b> " +
       data.requestDate +
       "<br><br>" +
-
+ 
       "<b>รายละเอียด:</b><br>" +
       data.requestDetail.replace(/\n/g, "<br>") +
 
+      "<hr>" +
+      "<b>สถานะปัจจุบัน:</b> " +
+      (data.currentStatus || "รับเรื่องแล้ว") +
+      "<br><br>"
       "</div>";
 
   })
@@ -159,12 +163,6 @@ function searchRequest() {
 
 </script>
 
-"<hr>" +
-
-"<b>สถานะปัจจุบัน:</b> " +
-(data.currentStatus || "รับเรื่องแล้ว") +
-"<br><br>"
-  
 </body>
 
 </html>
