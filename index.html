@@ -82,13 +82,10 @@ function searchRequest() {
       .trim();
 
   if (!requestId || !email) {
-
-  document
-    .getElementById("results")
-    .innerHTML =
-      "<p>กรุณากรอกรหัสแจ้งซ่อมและอีเมล์</p>";
-
-  return;
+    document
+      .getElementById("results")
+      .innerHTML ="<p>กรุณากรอกรหัสแจ้งซ่อมและอีเมล์</p>";
+    return;
   }
 
   document
